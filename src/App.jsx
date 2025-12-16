@@ -7,7 +7,7 @@ import CompanyPage from './pages/CompanyPage';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/funngro">
       <div className="flex flex-col min-h-screen">
         <Header />
         <div className="flex-1">
