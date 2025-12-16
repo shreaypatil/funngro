@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -7,7 +7,7 @@ import CompanyPage from './pages/CompanyPage';
 
 function App() {
   return (
-    <Router basename="/funngro">
+    <Router>
       <div className="flex flex-col min-h-screen">
         <Header />
         <div className="flex-1">
