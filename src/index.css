@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-dark-border;
+  }
+  
+  body {
+    @apply bg-dark-bg text-dark-text font-sans antialiased;
+    overflow-x: hidden;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  /* Glassmorphism effect */
+  .glass {
+    @apply bg-dark-card/50 backdrop-blur-xl border border-dark-border/50;
+  }
+  
+  .glass-strong {
+    @apply bg-dark-card/80 backdrop-blur-2xl border border-dark-border;
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+  
+  /* Glow effects */
+  .glow-hover {
+    @apply transition-all duration-300;
+  }
+  
+  .glow-hover:hover {
+    @apply shadow-glow;
+  }
+  
+  /* Card styles */
+  .card {
+    @apply bg-dark-secondary rounded-card p-6 border border-dark-border/30 transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply card hover:border-accent-purple/50 hover:shadow-glow cursor-pointer;
+  }
+  
+  /* Button base */
+  .btn {
+    @apply px-6 py-3 rounded-button font-semibold transition-all duration-300 inline-flex items-center gap-2;
+  }
+  
+  .btn-primary {
+    @apply btn bg-gradient-primary text-white hover:shadow-glow hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply btn border-2 border-accent-purple text-accent-purple hover:bg-accent-purple/10 hover:shadow-glow;
+  }
+  
+  .btn-ghost {
+    @apply btn text-dark-text-secondary hover:text-dark-text hover:bg-dark-secondary;
+  }
+  
+  /* Section container */
+  .section {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  /* Gradient backgrounds */
+  .bg-gradient-radial-purple {
+    background: radial-gradient(circle at 50% 50%, rgba(108, 92, 231, 0.15) 0%, transparent 50%);
+  }
+  
+  .bg-gradient-radial-blue {
+    background: radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.15) 0%, transparent 50%);
+  }
+}
+
+@layer utilities {
+  /* Custom scrollbar */
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-track {
+    @apply bg-dark-secondary;
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    @apply bg-accent-purple/50 rounded-full;
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent-purple;
+  }
+  
+  /* Text shadow for better readability */
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Backdrop blur utilities */
+  .backdrop-blur-custom {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
